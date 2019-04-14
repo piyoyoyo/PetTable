@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<link href="/css/style.css" th:href="@{/css/style.css}" rel="stylesheet"/>
+	<title>Pet table</title>
+	<meta charset="utf-8"/>
+</head>
+
+<body>
+	<h1>Pet List</h1>
+
+	<table class="tbtest">
+        <tr th:each="pet : ${petlist}" th:object="${pet}">
+        	<td th:text="*{name}"></td>
+        </tr>
+     </table>
+</body>
+</html>
